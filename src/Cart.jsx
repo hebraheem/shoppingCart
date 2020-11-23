@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import CartItems from './CartItems'
+import './Cart.css'
 
 function Cart({initialItems}) {
 
@@ -9,17 +10,18 @@ function Cart({initialItems}) {
         total + item.qty * item.price
     ),0).toFixed(2)
 
-    function btnHandler(id, action) {
+    const btnHandler = (id, action) => {
         const newItems = btnItems.map(btnItem =>{
             if(btnItem.id === id){
-                return{...btnItem, qty: action}
+                return {...btnItem, qty: action}
             } else return btnItem
         })
         setBtnItems(newItems)
     }
     return (
-        <div>
-            <h1>Shopping Cart</h1>
+        <div className="Cart">
+            <h1 className="shopping">Shopping Cart</h1>
+            <hr/>
             {btnItems.map(item => 
                 <CartItems key ={item.id} {...item} btnHandler ={btnHandler}/>
             )}
