@@ -25,7 +25,9 @@ function Cart({initialItems}) {
             {btnItems.map(item => 
                 <CartItems key ={item.id} {...item} btnHandler ={btnHandler}/>
             )}
-            <h3>Total: ${Grandtotal}</h3>
+            <div className="float">
+                <h3>Total: ${Grandtotal}</h3>
+            </div>
         </div>
     )
 }

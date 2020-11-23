@@ -1,4 +1,5 @@
 import React from 'react'
+import './cart-Item.css';
 
 
 function CartItems({id, name, price, qty, btnHandler}) {
@@ -12,9 +13,9 @@ function CartItems({id, name, price, qty, btnHandler}) {
             <div>{name}</div>
             <div>{price}</div>
             <div>
-            <button onClick ={removeItem} disabled={qty <= 1}>-</button>
+            <button onClick ={removeItem} disabled={qty <= 1}> - </button>
             {qty}
-            <button onClick ={addItem}>+</button>
+            <button onClick ={addItem}> + </button>
             </div>
             <h5>Sum: ${sum}</h5>
         </div>

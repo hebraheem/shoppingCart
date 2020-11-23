@@ -1,0 +1,17 @@
+.CartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px 0 0 0;
+}
+
+.CartItem > div {
+    width: 100px;
+    text-align: center;
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
